@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            border: 0px 0px 1px 0px gray;
+            width: 400px;
+            height: 26px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .itsform{
+            width: 430px;
+            height: 400px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 12px rgb(37, 61, 35);
+        }
+        .main{
+            width: 400px;
+            height: 300px;
+            font-size: 17px;
+            text-align: start;
+            word-wrap: break-word;
+        }
+        .bottom{
+            border: none;
+            background-color: rgb(72, 155, 72);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="/makepost/{{nickname}}" method="post">
+        <div class="itsform">
+        <input class="title" type="text" placeholder="Title" name="title"> <br>
+        <textarea name="main_text" class="main" cols="30" rows="20" placeholder="text here"></textarea>
+        <input class="bottom" type="submit" value="post">
+    </div>
+    </form>
+    {{error}}
+    <br>
+    <br>
+    <a href="/posts">Back</a>
+</body>
+</html>

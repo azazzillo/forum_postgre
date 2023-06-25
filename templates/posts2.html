@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .post{
+            width: 95%;
+            height: 120px;
+            border: solid gray 1px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .title{
+            font-size: 34px;
+            font-weight: bolder;
+        }
+        .author{
+            font-size: 20px;
+            color: rgb(38, 38, 38);
+        }
+        .sm{
+            color: green;
+            font-size: 15px;
+        }
+        .data{
+            color: rgba(128, 128, 128, 0.658);
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    hi {{nickname}}
+    {% for i in posts %}
+    <div class="post">
+        <a class="title" href="/post/{{i[0]}}">{{i[2]}}</a>
+        <div class="author">{{i[8]}}</div>
+        <br>
+        <div class="sm">{{i[4]}} </div>   
+        <div class="data">{{i[5]}}</div>
+
+
+    </div>
+    {% endfor %}
+
+</body>
+</html>

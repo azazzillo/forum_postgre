@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .card{
+            width: 250px;
+            height: 150px;
+            border-bottom: 5px black solid;
+            border-left: 3px black solid;
+            border-right: 1px black solid;
+            border-radius: 10%;
+            padding: 10px;
+            margin-left: 50px;
+            margin-top: 50px;
+            background-color: rgb(242, 249, 255);
+        }
+        .pole{
+            width: 200px;
+            height: 16px;
+            border: none;
+            border-top: 2px black solid;
+            border-right: 1px black solid;
+            margin-bottom: 5px;
+            background-color: rgb(253, 254, 255);
+        }
+        .error{
+            color: red;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        .euthor{
+            border: none;
+
+            border-top: 2px black solid;
+            border-right: 1px black solid;            
+            width: 30px;
+            height: 16px;
+        }
+        .button{
+            border: none;
+            border-bottom: 3px black solid;
+            border-left: 2px black solid;
+            border-right: 1px rgb(255, 255, 255) solid;
+            border-top: 1px rgb(255, 255, 255) solid;
+            background-color: rgb(216, 236, 213);
+        }
+        .cc{
+            margin-left: 50px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form class="card" action="/" method="post">
+        <input class="pole" type="text" placeholder="name" name="name"> <br>
+        <input class="pole" type="text" placeholder="nickname" name="nickname"> <br>
+        <input class="pole" type="password" placeholder="password" name="password"> <br>
+        <input class="pole" type="password" placeholder="password again" name="rpassword"> <br>
+        
+        Are you the author? yes/no <br>
+        <input class="euthor" type="text" placeholder="no" name="is_author">
+
+        <input class="button" type="submit" value="regist">
+    </form>
+
+    <div class="error">{{error}}</div>
+    
+    <a class="cc" href="/authorization">Login</a>
+</body>
+</html>
