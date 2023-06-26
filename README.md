@@ -1,3 +1,11 @@
+<- env ->
+что нужно установить из енв??
+
+pip install python-decouple
+pip install flask
+pip install psycopg2
+ 
+
  <- settings ->
 
 dbname   = 'forum'
