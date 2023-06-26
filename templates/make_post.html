@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-color: rgb(15, 19, 28);  
+        }
         .title{
             border: 0px 0px 1px 0px gray;
             width: 400px;
             height: 26px;
             font-size: 20px;
             margin-bottom: 10px;
+            background-color:  rgb(15, 19, 28);
+            border: solid rgba(240, 248, 255, 0.336) 1px;
+            border-radius: 5px;
+            color: aliceblue;
         }
         .itsform{
             width: 430px;
@@ -25,11 +32,26 @@
             font-size: 17px;
             text-align: start;
             word-wrap: break-word;
+            background-color:  rgb(15, 19, 28);
+            border: solid rgba(240, 248, 255, 0.336) 1px;
+            border-radius: 5px;
+            color: aliceblue;
         }
         .bottom{
             border: none;
             background-color: rgb(72, 155, 72);
             color: white;
+            border-radius: 5px;
+            width: 40px;
+            height: 20px;
+        }
+        .back{
+            margin-left: 17px;
+            font-size: 30px;
+        }
+        .error{
+            color: red;
+            margin-left: 17px;
         }
     </style>
 </head>
@@ -41,9 +63,8 @@
         <input class="bottom" type="submit" value="post">
     </div>
     </form>
-    {{error}}
-    <br>
-    <br>
-    <a href="/posts">Back</a>
+    <div class="error">{{error}}</div>
+    <br> <br>
+    <a class="back" href="/posts">Back</a>
 </body>
 </html>
